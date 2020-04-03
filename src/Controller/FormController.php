@@ -42,12 +42,6 @@ class FormController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $recTask = new RecruitmentTask();
-            $data = $form->getData();
-            $value = $recTask->getMaxOfSeries($data['input']);
-        }
-
         // Render form
         return $this->render('task/form.html.twig', [
             'form' => $form->createView()
@@ -56,6 +50,6 @@ class FormController extends AbstractController
 
     private function isResultValid($value)
     {
-        return $value !== null;
+        return $value != -1;
     }
 }

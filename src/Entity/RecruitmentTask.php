@@ -7,9 +7,9 @@ class RecruitmentTask
     public function getMaxOfSeries($n)
     {
         if ($n < 1 || $n > 99999)
-            return null;
+            return -1;
         else if ($n == 1)
-            return null;
+            return 1;
 
         $elements = array(0, 1);
 
