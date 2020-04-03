@@ -1,3 +1,6 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+app:
+  path: /form
+  controller: App\Controller\FormController::new
